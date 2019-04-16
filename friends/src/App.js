@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import FriendsList from './components/FriendsList';
+import FriendList from './components/FriendList';
+import {Header, Container} from './StyledComponents';
 
 class App extends Component {
   render() {
+
     return (
-      <div className="App">
-        <h1>Friend's App</h1>
-        <FriendsList />
-      </div>
+      <Container>
+        <Header>Keep Track of Your Friend's App</Header>
+        <FriendList />
+      </Container>
     );
   }
 }
