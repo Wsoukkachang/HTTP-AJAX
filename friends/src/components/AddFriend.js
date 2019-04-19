@@ -5,7 +5,8 @@ class AddFriend extends Component {
     constructor(props){
         super(props);
         this.state = {
-            newFriend: {
+            friend: {
+                id: '',
                 name: '',
                 age: '',
                 email: ''
@@ -13,24 +14,24 @@ class AddFriend extends Component {
         }
     }
 
-    handleChange = event => {
+    handleChange = e => {
         this.setState({
-            newFriend: {
-                ...this.state.newFriend,
-                [event.target.name]: event.target.value
+            friend: {
+                ...this.state.friend,
+                [e.target.name]: e.target.value
             }
         })
     }
 
-    addNewFriend = event => {
-        event.preventDefault();
-        console.log(this.state.newFriend);
-        this.props.addFriend(this.state.newFriend)
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log(this.state.friend);
+        this.props.addFriend(this.state.friend)
     }
     
     render() {
         return(
-            <Form onSubmit={this.addNewFriend}>
+            <Form onSubmit={this.handleSubmit}>
                 <Input name="name" placeholder="Enter Name" onChange={this.handleChange}/>
                 <Input name="age" placeholder="Enter Age" onChange={this.handleChange}/>
                 <Input name="email" placeholder="Enter Email" onChange={this.handleChange}/>

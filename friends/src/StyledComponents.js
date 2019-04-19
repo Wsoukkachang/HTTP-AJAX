@@ -5,7 +5,7 @@ const Container = styled.div`
     margin: 50px auto;
     border: 5px outset gainsboro;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     background-color: skyblue;
 `;
 
