@@ -6,19 +6,20 @@ class AddFriend extends Component {
         super(props);
         this.state = {
             friend: {
-                id: '',
                 name: '',
                 age: '',
-                email: ''
+                email: '',
+                phone: ''
             }
         }
     }
 
     handleChange = e => {
+        e.preventDefault();
         this.setState({
             friend: {
                 ...this.state.friend,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value,
             }
         })
     }
@@ -30,11 +31,13 @@ class AddFriend extends Component {
     }
     
     render() {
+
         return(
             <Form onSubmit={this.handleSubmit}>
                 <Input name="name" placeholder="Enter Name" onChange={this.handleChange}/>
                 <Input name="age" placeholder="Enter Age" onChange={this.handleChange}/>
                 <Input name="email" placeholder="Enter Email" onChange={this.handleChange}/>
+                <Input name="phone" placeholder="Enter Phone" onChange={this.handleChange}/>
                 <Button type="submit">Add Friend</Button>
             </Form>
         )

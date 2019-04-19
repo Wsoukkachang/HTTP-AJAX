@@ -10,7 +10,8 @@ class Friend extends React.Component {
                 id: props.friend.id,
                 name: props.friend.name,
                 age: props.friend.age,
-                email: props.friend.email
+                email: props.friend.email,
+                phone: props.friend.phone
             }
         }
     }
@@ -22,7 +23,7 @@ class Friend extends React.Component {
 
     handleDelete = e => {
         e.preventDefault();
-        this.props.deleteFriend(this.props.friend)
+        this.props.deleteFriend(this.state.friend) 
     }
 
     handleChange = e => {
@@ -41,13 +42,14 @@ class Friend extends React.Component {
             <Card>
                 <CardBody>
                     <CardTitle>
-                        <h2>#{this.state.friend.id}</h2>
+                        <h2>#{this.state.friend.id}</h2> 
                         <h2>{this.state.friend.name}</h2>
                     </CardTitle>
                     <CardText>
                         <Input small name="name" value={this.state.friend.name} onChange={this.handleChange}/><br/>
                         <Input small name="age" value={this.state.friend.age} onChange={this.handleChange}/><br/>
-                        <Input small name="email" value={this.state.friend.email} onChange={this.handleChange}/>
+                        <Input small name="email" value={this.state.friend.email} onChange={this.handleChange}/><br/>
+                        <Input small name="phone" value={this.state.friend.phone} onChange={this.handleChange}/>
                     </CardText>
                     <Button type="submit" onClick={this.handleUpdate}>Update Changes</Button>
                     <Button onClick={this.handleDelete}>Delete</Button>
