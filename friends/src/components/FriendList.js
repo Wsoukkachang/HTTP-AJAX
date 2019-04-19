@@ -40,7 +40,7 @@ class FriendList extends Component {
         }
 
     render() {
-        console.log("This State", this.state)
+        // console.log("This State", this.state)
 
         return (
         <div>

@@ -35,12 +35,13 @@ class Friend extends React.Component {
     }
 
     render() {
-        console.log(this.state.friend)
-        
+        // console.log(this.state.friend)
+
         return (
             <Card>
                 <CardBody>
                     <CardTitle>
+                        <h2>#{this.state.friend.id}</h2>
                         <h2>{this.state.friend.name}</h2>
                     </CardTitle>
                     <CardText>
@@ -48,7 +49,7 @@ class Friend extends React.Component {
                         <Input small name="age" value={this.state.friend.age} onChange={this.handleChange}/><br/>
                         <Input small name="email" value={this.state.friend.email} onChange={this.handleChange}/>
                     </CardText>
-                    <Button type="submit" onClick={this.handleUpdate}>Edit</Button>
+                    <Button type="submit" onClick={this.handleUpdate}>Update Changes</Button>
                     <Button onClick={this.handleDelete}>Delete</Button>
                 </CardBody>
             </Card>

@@ -12,7 +12,6 @@ const Container = styled.div`
 const Header = styled.div`
     font-size: 40px;
     color: white;
-    margin-top: 20px;
 `;
 
 const Card = styled.div`
@@ -26,19 +25,18 @@ const Card = styled.div`
 `;
 
 const CardBody = styled.div`
-    width: 100%;
     padding: 15px;
     align-items: center;
+    margin-left: -5px;
 `;
 
 const CardTitle = styled.div`
     display: block;
-    text-align: left;
+    text-align: center;
 `;
 
 const CardText = styled.text`
     display: block;
-    text-align: left;
 `;
 
 const Form = styled.form`
@@ -48,15 +46,16 @@ const Input = styled.input`
     padding: 5px;
     font-size: 16px;
     margin: 10px;
+    text-align: center;
 `;
 
 const Button = styled.button`
-    background-color: gainsboro;
+    background-color: lightgrey;
     color: black;
-    padding: 10px;
+    padding: 7px;
     font-size: 16px;
     border: 1px solid lightgrey;
-    margin: 10px;
+    margin: 7px;
     cursor: pointer;
 `;
 
